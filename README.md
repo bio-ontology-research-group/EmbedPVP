@@ -21,7 +21,7 @@ We integrate the annotates from Gene ontology [GO](http://geneontology.org/docs/
 - ``training.py``: script to train and testing the model, with Hyperparameter optimization
 
 ## Running EmbedPVP using pretrained models
-1. Download the distribution file in []()
+1. Download the distribution file
 2. Extract the distribution files EmbedPVP and `cd EmbedPVP`
 3. Database requirements: Installing Annovar: 
   - To download and install the Annovar command line tool follow the [Annovar installation instructions](https://annovar.openbioinformatics.org/en/latest/user-guide/download/).
