@@ -1,4 +1,5 @@
-#AF annotation
+#AF annotation : 
+# sh af_annotation.sh input_file.vcf outpu_file.vcf /path/to/annovar
 input=$1
 output=$2
 path_to_annovar=$3

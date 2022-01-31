@@ -1,3 +1,5 @@
+# To run: perl MAF_filter.pl annotated_vcf.vcf 0.01
+
 use strict;
 
 my ($test, $line, @arr, @result, $maf, $value);

@@ -2,15 +2,26 @@
 Prioritizing causative variants SNP/indls by integrating functional embedding and biological annotations for genes.
 
 ## Dataset
-We train and evaluate our method using human genomic Single nucleotide variants (SNVs) collected from [clinvar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/) dataset.
+We train and evaluate our method using human genomic Single nucleotide variants (SNVs) collected from [clinvar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/) dataset.
+
+
+## Annotation data sources (integrated in the candidate SNP prediction workflow)
+We integrated the annotations from different sources:
+- Gene ontology ([GO](http://geneontology.org/docs/download-go-annotations/))
+- Mammalian Phenotype ontology ([MP](http://www.informatics.jax.org/vocab/mp_ontology))
+- Human Phenotype Ontology ([HPO](https://hpo.jax.org/app/download/annotation))
+- Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
+- Gene expression in human Celltypes Ontology ([CL](https://www.nature.com/articles/s41586-018-0590-4))
+
+This work is done using embedding generated from [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type.
+
+We collected [different genomics features](https://annovar.openbioinformatics.org/en/latest/user-guide/filter/) using the [Annovar](https://annovar.openbioinformatics.org/en/latest/user-guide/download/)  public tool for the variants annotation. 
+
 
 ## Dependencies
 The code was developed and tested using python 3.7. To install python dependencies run:  
  `pip install -r requirements.txt`
 
-## Prediction the candidate SNPs workflow
-We integrate the annotates from Gene ontology [GO](http://geneontology.org/docs/download-go-annotations/), Uber-anatomy ontology
- [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon), Mammalian Phenotype ontology [MP](http://www.informatics.jax.org/vocab/mp_ontology), and Human Phenotype Ontology [HPO](https://hpo.jax.org/app/download/annotation) using [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type. In addition we collected genomics features using public prediction scores for the SNP. 
 
 ## Scripts
 - Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
@@ -20,12 +31,24 @@ We integrate the annotates from Gene ontology [GO](http://geneontology.org/docs/
 - ``DL2vec``: Details for generate DL2vec embeddings.
 - ``training.py``: script to train and testing the model, with Hyperparameter optimization
 
-## Running EmbedPVP using pretrained models
-1. Download the distribution file
-2. Extract the distribution files EmbedPVP and `cd EmbedPVP`
-3. Database requirements: Installing Annovar: 
+
+## Installation
+
+```
+pip install embedpvp
+```
+
+- Database requirements: Installing Annovar: 
   - To download and install the Annovar command line tool follow the [Annovar installation instructions](https://annovar.openbioinformatics.org/en/latest/user-guide/download/).
-3. Download the required database by run:  `bash src/downloadDB.sh`
+
+## Running EmbedPVP using pretrained models
+1. Download the distribution file:
+```
+git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
+cd EmbedPVP
+```
+2. Download all the files from [data]() and place the uncompressed files/repository in the folder named "data".
+3. Download the required database using Annovar by run:  `bash src/downloadDB.sh`
 4. Run the command `embedpvp --help` to display help and parameters:
 
 ```
@@ -37,11 +60,10 @@ optional arguments:
                         Path to VCF file
   -hpo [HPO]            List of phenotype ids separated by commas
   -outfile [OUTFILE]    Path to results file
-  -model [MODEL]        Preferred model (go, mp, uberon, hp,
-                        go_ppi,mp_ppi,uberon_ppi,hp_ppi) , default='hp'
+  -model [MODEL]        Preferred model (go, mp, uberon, hp, cl, union, intersection) , default='hp'
 ```
 
-### Example:
+### Run the example (with you own HPO terms):
     embedPVP -inputfile data/example.vcf -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -outfile example_output.txt -model hp 
 
  ```   
@@ -53,6 +75,7 @@ optional arguments:
 The analysis is Done. You can find the priortize list in the output file: example_output.txt 
 
 ```
+
 #### Output:
 The script will output a ranking a score for the candidate caustive SNP. 
 
