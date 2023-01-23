@@ -1,10 +1,6 @@
 # EmbedPVP
 Prioritizing causative variants SNP/indls by integrating functional embedding and biological annotations for genes.
 
-## Dataset
-We train and evaluate our method using human genomic Single nucleotide variants (SNVs) collected from [clinvar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/) dataset.
-
-
 ## Annotation data sources (integrated in the candidate SNP prediction workflow)
 We integrated the annotations from different sources:
 - Gene ontology ([GO](http://geneontology.org/docs/download-go-annotations/))
