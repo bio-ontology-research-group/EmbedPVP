@@ -1,3 +1,4 @@
+#Scipt to filter the common variants from the annotated VCF file 
 # To run: perl MAF_filter.pl annotated_vcf.vcf 0.01
 
 use strict;
