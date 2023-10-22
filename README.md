@@ -17,9 +17,6 @@ We integrated the annotations from different sources:
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different 
 embedding-based approaches.
 
-## Scripts
-- Details for all the experiments and preprocessing can be found in the [Experiment](https://github.com/bio-ontology-research-group/EmbedPVP/tree/main/src) directory.
-
 ## Installation
 
 ```
@@ -27,13 +24,15 @@ pip install embedpvp
 ```
 
 ## Running EmbedPVP using pretrained models:
-1. Download the distribution file:
+1. Download the distribution file and set up environment
 ```
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
 cd EmbedPVP
+conda env create -f environment.yml
+conda activate embedpvp
 ```
 2. Download all the files from [data]() and place the uncompressed files/repository in the folder named "data".
-3. Download the required database using Annovar by run:  `bash src/downloadDB.sh`
+3. Download the required database using CADD by run:  `bash src/run_cadd.sh`
 4. Run the command `embedpvp --help` to display help and parameters:
 
 ```
@@ -62,7 +61,7 @@ The analysis is Done. You can find the priortize list in the output file: exampl
 ```
 
 #### Output:
-The script will output a ranking a score for the candidate caustive SNP. 
+The script will output a ranking a score for the candidate caustive list of variants. 
 
 ## Note
 For any questions or comments please contact azza.althagafi@kaust.edu.sa
