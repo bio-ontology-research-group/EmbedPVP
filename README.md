@@ -26,9 +26,6 @@ embedding-based approaches.
 pip install embedpvp
 ```
 
-- Database requirements: Installing Annovar: 
-  - To download and install the Annovar command line tool follow the [Annovar installation instructions](https://annovar.openbioinformatics.org/en/latest/user-guide/download/).
-
 ## Running EmbedPVP using pretrained models:
 1. Download the distribution file:
 ```
