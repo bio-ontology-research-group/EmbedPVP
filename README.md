@@ -46,7 +46,7 @@ conda activate embedpvp
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
 
-optional arguments:
+Arguments:
   -h, --help            show this help message and exit
   -inputfile [INPUTFILE]	Path to VCF file
   -ontology [OWL]	Path to ontology file in OWL format
