@@ -9,10 +9,6 @@ We integrated the annotations from different sources:
 - Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
 - Gene expression in human Celltypes Ontology ([CL](https://www.nature.com/articles/s41586-018-0590-4))
 
-This work is done using embedding generated from [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type.
-
-We collected [different genomics features](https://annovar.openbioinformatics.org/en/latest/user-guide/filter/) using the [Annovar](https://annovar.openbioinformatics.org/en/latest/user-guide/download/)  public tool for the variants annotation. 
-
 
 ## Dependencies
 The code was developed and tested using python 3.7. To install python dependencies run:  
