@@ -31,7 +31,7 @@ cd EmbedPVP
 conda env create -f environment.yml
 conda activate embedpvp
 ```
-2. Download all the files from [data]() and place the uncompressed files/repository in the folder named "data".
+2. Download all the files from [data]() and place the uncompressed the file in the folder named `data`.
 3. Download the required database using CADD by run:  `bash src/run_cadd.sh`
 4. Run the command `embedpvp --help` to display help and parameters:
 
