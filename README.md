@@ -14,7 +14,8 @@ We integrated the annotations from different sources:
 - The code was developed and tested using python 3.7. To install python dependencies run:  
  `pip install -r requirements.txt`
 
-- We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different embedding-based approaches implemented by the mOWL.
+- We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different 
+embedding-based approaches.
 
 ## Scripts
 - Details for all the experiments and preprocessing can be found in the [Experiment](https://github.com/bio-ontology-research-group/EmbedPVP/tree/main/src) directory.
