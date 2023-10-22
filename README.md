@@ -17,6 +17,10 @@ We integrated the annotations from different sources:
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different 
 embedding-based approaches.
 
+<kbd>
+<img src="https://raw.githubusercontent.com/bio-ontology-research-group/mowl/main/docs/source/mowl_black_background_colors_2048x2048px.png" alt="mOWL library" align="right" width="200">
+</kbd>
+
 ## Installation
 
 ```
