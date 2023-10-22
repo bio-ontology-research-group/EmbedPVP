@@ -58,7 +58,7 @@ EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding an
 - `-pathogenicity [PATH]`: Path to the pathogenicity prediction file (CADD)
 - `-outfile [OUTFILE]`: Path to the results output file
 
-### Run the example (with your own HPO terms):
+### Run the example :
 
 ```shell
 embedPVP \
