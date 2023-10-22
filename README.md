@@ -1,5 +1,5 @@
 # EmbedPVP
-Prioritizing causative variants SNP/indls by integrating functional embedding and biological annotations for genes.
+Prioritizing genomic variants (SNP/InDls) through neuro-symbolic, knowledge-enhanced learning
 
 ## Annotation data sources (integrated in the candidate SNP prediction workflow)
 We integrated the annotations from different sources:
@@ -13,16 +13,10 @@ We integrated the annotations from different sources:
 ## Dependencies
 The code was developed and tested using python 3.7. To install python dependencies run:  
  `pip install -r requirements.txt`
-
+We also used ([mOWL](hhttps://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different embedding-based approaches implemented by the mOWL library~
 
 ## Scripts
-- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
-- ``download.sh``: This script is used to download the annotions databases.
-- ``annotations.sh``: This script is used to annotate the varaints.
-- ``data_preprocessing.py``: preprocessing the annotations and features selection. 
-- ``DL2vec``: Details for generate DL2vec embeddings.
-- ``training.py``: script to train and testing the model, with Hyperparameter optimization
-
+- Details for all the experiments and preprocessing can be found in the [Experiment](https://github.com/bio-ontology-research-group/EmbedPVP/tree/main/src) directory.
 
 ## Installation
 
@@ -33,7 +27,7 @@ pip install embedpvp
 - Database requirements: Installing Annovar: 
   - To download and install the Annovar command line tool follow the [Annovar installation instructions](https://annovar.openbioinformatics.org/en/latest/user-guide/download/).
 
-## Running EmbedPVP using pretrained models
+## Running EmbedPVP using pretrained models:
 1. Download the distribution file:
 ```
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
@@ -70,7 +64,6 @@ The analysis is Done. You can find the priortize list in the output file: exampl
 
 #### Output:
 The script will output a ranking a score for the candidate caustive SNP. 
-
 
 ## Note
 For any questions or comments please contact azza.althagafi@kaust.edu.sa
