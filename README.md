@@ -46,7 +46,6 @@ conda activate embedpvp
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
 
-
 ## Arguments:
 
 - `-h, --help`: Show this help message and exit
@@ -58,20 +57,19 @@ EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding an
 - `-pathogenicity [PATH]`: Path to the pathogenicity prediction file (CADD)
 - `-outfile [OUTFILE]`: Path to the results output file
 
+```
 ### Run the example :
 
-```shell
-embedPVP \
+```
+sh embedPVP \
     -inputfile data/example.vcf \
     -ontology data/upheno.owl \
     -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007 \
     -model hp \
     -embedding DL2vec \
     -pathogenicity data/cadd_example.tsv \
-    -outfile example_output.tsv
-    	
- ```   
- 
+    -outfile example_output.tsv   	
+
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
  |========                        | 25% Annotated files generated successfully.
  |================                | 50% Phenotype prediction...
