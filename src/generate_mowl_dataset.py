@@ -73,7 +73,7 @@ for sp in species:
         relation_name="is_associated_with",
         bidirectional=False,
     )
-    ''
+    '''
 
 
 
