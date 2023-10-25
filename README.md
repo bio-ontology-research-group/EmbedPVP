@@ -9,7 +9,6 @@ We integrated the annotations from different sources:
 - Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
 - Gene expression in human Celltypes Ontology ([CL](https://www.nature.com/articles/s41586-018-0590-4))
 
-
 ## Dependencies
 
 <div align="right">
@@ -22,8 +21,6 @@ We integrated the annotations from different sources:
 
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different 
 embedding-based approaches.
-
-
 
 ## Installation
 
@@ -48,14 +45,14 @@ EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding an
 
 Arguments:
 
-- -h, --help: Show this help message and exit
-- -inputfile [INPUTFILE]: Path to the VCF file
-- -ontology [OWL]: Path to the ontology file in OWL format
-- -hpo [HPO]: List of phenotype codes separated by commas
-- -model [MODEL]: Preferred model (go, mp, uberon, hp, cl, union), default='hp'
-- -embedding [EMBED]: Preferred embedding model (TransE, TransD, DL2vec), default='DL2vec'
-- -pathogenicity [PATH]: Path to the pathogenicity prediction file (CADD)
-- -outfile [OUTFILE]: Path to the results output file
+	-h, --help: Show this help message and exit
+	-inputfile [INPUTFILE]: Path to the VCF file
+	-ontology [OWL]: Path to the ontology file in OWL format
+	-hpo [HPO]: List of phenotype codes separated by commas
+	-model [MODEL]: Preferred model (go, mp, uberon, hp, cl, union), default='hp'
+	-embedding [EMBED]: Preferred embedding model (TransE, TransD, DL2vec), default='DL2vec'
+	-pathogenicity [PATH]: Path to the pathogenicity prediction file (CADD)
+	-outfile [OUTFILE]: Path to the results output file
 
 ```
 
