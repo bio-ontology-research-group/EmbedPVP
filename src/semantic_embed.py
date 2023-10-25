@@ -29,9 +29,6 @@ import os
 import logging
 from get_dis  import GDADataset 
 
-
-#--datasets {data} --onto {onto} --vector_size {param['vector_size']} --epochs {param['epochs']} 
-# --learning_rate {param['learning_rate']} --batch_size {param['batch_size']}"
 ROOT='./mowl_results/'
 tmp = tempfile.mkdtemp(prefix='mowl', suffix='/')
 
@@ -46,13 +43,11 @@ tmp = tempfile.mkdtemp(prefix='mowl', suffix='/')
 @ck.option("--learning_rate", "-l", type=float, default = 0.01)
 @ck.option("--batch_size", "-bt", default = 100, type=int)
 @ck.option("--device", "-d", default = "cpu")
-
 def main(onto, method, vector_size , margin , neg_norm, epochs,  learning_rate , batch_size, device):
-
     
-    owl = f'/encrypted/e3008/Azza/tools/compare/mowl/mowl/data_{onto}/train_{onto}.owl'
-    test = f'/encrypted/e3008/Azza/tools/compare/mowl/mowl/data_{onto}/test_{onto}.owl'
-    valid = f'/encrypted/e3008/Azza/tools/compare/mowl/mowl/data_{onto}/valid_{onto}.owl'
+    owl = f'../mowl/data_{onto}/train_{onto}.owl'
+    test = f'../mowl/data_{onto}/test_{onto}.owl'
+    valid = f'../mowl/data_{onto}/valid_{onto}.owl'
     
     ds = GDADataset(owl, valid, test)
 
