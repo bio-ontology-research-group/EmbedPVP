@@ -11,10 +11,7 @@ from mowl.projection.edge import Edge
 from mowl.datasets.builtin import GDADataset, GDAHumanDataset, GDAMouseDataset
 from ELEmModule import ELEmModule, ELEmbeddings, ELBoxEmbeddings
 from mowl.nn.elmodule import ELModule
-#from mowl.evaluation.rank_based import ModelRankBasedEvaluator
 from rank_based import ModelRankBasedEvaluator
-
-
 from mowl.projection.dl2vec.model import DL2VecProjector 
 from mowl.kge import KGEModel
 from mowl.evaluation.rank_based import EmbeddingsRankBasedEvaluator
