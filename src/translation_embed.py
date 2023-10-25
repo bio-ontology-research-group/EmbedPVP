@@ -12,10 +12,7 @@ from mowl.datasets.builtin import GDADataset, GDAHumanDataset, GDAMouseDataset
 from pykeen.models import TransE,ConvE,DistMult,TransR,TransD
 from mowl.projection.dl2vec.model import DL2VecProjector 
 from mowl.kge import KGEModel
-
-#from mowl.evaluation.rank_based  import EmbeddingsRankBasedEvaluator
 from rank_based import EmbeddingsRankBasedEvaluator
-
 from mowl.evaluation.base import TranslationalScore, CosineSimilarity
 from mowl.projection.factory import projector_factory, PARSING_METHODS
 from util import exist_files, load_pickles, save_pickles
@@ -27,9 +24,6 @@ import os
 import logging
 from get_dis  import GDADataset 
 
-
-#--datasets {data} --onto {onto} --vector_size {param['vector_size']} --epochs {param['epochs']} 
-# --learning_rate {param['learning_rate']} --batch_size {param['batch_size']}"
 ROOT='./mowl_results/'
 tmp = tempfile.mkdtemp(prefix='mowl', suffix='/')
 print(tmp)
@@ -43,12 +37,11 @@ print(tmp)
 @ck.option("--learning_rate", "-l", type=float, default = 0.01)
 @ck.option("--batch_size", "-bt", default = 100, type=int)
 @ck.option("--device", "-d", default = "cuda")
-
 def main(onto, method, vector_size ,epochs,  learning_rate , batch_size, device):
 
-    owl = f'/encrypted/e3008/Azza/tools/compare/mowl/mowl/data_{onto}/train_{onto}.owl'
-    test = f'/encrypted/e3008/Azza/tools/compare/mowl/mowl/data_{onto}/test_{onto}.owl'
-    valid = f'/encrypted/e3008/Azza/tools/compare/mowl/mowl/data_{onto}/valid_{onto}.owl'
+    owl = f'../mowl/data_{onto}/train_{onto}.owl'
+    test = f'../mowl/data_{onto}/test_{onto}.owl'
+    valid = f'../mowl/data_{onto}/valid_{onto}.owl'
     
     ds = GDADataset(owl,valid, test)
     
