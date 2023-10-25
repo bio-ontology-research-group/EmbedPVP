@@ -45,14 +45,14 @@ EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding an
 
 Arguments:
 
-	-h, --help: Show this help message and exit
-	-inputfile [INPUTFILE]: Path to the VCF file
-	-ontology [OWL]: Path to the ontology file in OWL format
-	-hpo [HPO]: List of phenotype codes separated by commas
-	-model [MODEL]: Preferred model (go, mp, uberon, hp, cl, union), default='hp'
-	-embedding [EMBED]: Preferred embedding model (TransE, TransD, DL2vec), default='DL2vec'
-	-pathogenicity [PATH]: Path to the pathogenicity prediction file (CADD)
-	-outfile [OUTFILE]: Path to the results output file
+-h, --help: Show this help message and exit
+-inputfile [INPUTFILE]: Path to the VCF file
+-ontology [OWL]: Path to the ontology file in OWL format
+-hpo [HPO]: List of phenotype codes separated by commas
+-model [MODEL]: Preferred model (go, mp, uberon, hp, cl, union), default='hp'
+-embedding [EMBED]: Preferred embedding model (TransE, TransD, DL2vec), default='DL2vec'
+-pathogenicity [PATH]: Path to the pathogenicity prediction file (CADD)
+-outfile [OUTFILE]: Path to the results output file
 
 ```
 
