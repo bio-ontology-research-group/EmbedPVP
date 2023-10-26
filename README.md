@@ -1,6 +1,18 @@
 # EmbedPVP
 Prioritizing genomic variants (SNP/InDls) through neuro-symbolic, knowledge-enhanced learning
 
+We developed an Embedding-based Phenotype Variant
+  Predictor (EmbedPVP), a computational method to prioritize variants
+  involved in genetic diseases by combining genomic information and
+  clinical phenotypes. EmbedPVP leverages a large amount of background
+  knowledge from human and model organisms about molecular mechanisms
+  through which abnormal phenotypes may arise. Specifically, EmbedPVP
+  incorporates phenotypes linked to genes, functions of gene products,
+  and the anatomical site of gene expression, and systematically
+  relates them to their phenotypic effects through neuro-symbolic,
+  knowledge-enhanced machine learning.
+
+  
 ## Annotation data sources (integrated in the candidate SNP prediction workflow)
 We integrated the annotations from different sources:
 - Gene ontology ([GO](http://geneontology.org/docs/download-go-annotations/))
