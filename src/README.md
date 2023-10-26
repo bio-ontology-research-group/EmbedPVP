@@ -14,11 +14,11 @@ Prepare the annotation dataset from different ontologies ([GO](http://geneontolo
 - `generate_mowl_dataset.py`: 
 Script to prepare the input ontology to run [mOWL](https://github.com/bio-ontology-research-group/mowl) library and add annotations to the [uPheno](https://zenodo.org/records/3710690) ontology.
 
-- `graph_based_embed.py`, `semantic_embed.py`, `translation_embed.py` : 
-script for parameters optimization using embedding methods.
+- `graph_based_embed.py, semantic_embed.py, and translation_embed.py`: 
+Sripts for parameters optimization using embedding methods.
 
-- `embedpvp_graph_based.py`, `embedpvp_semantic.py`, `embedpvp_trans_method.py` : 
-script for generating the embeddings for all the genes using the optimized parameters.
+- `embedpvp_graph_based.py, embedpvp_semantic.py, and embedpvp_trans_method.py`: 
+Scripts for generating the embeddings for all the genes using the optimized parameters.
 
 - `embedpvp_preprocessing.py`: 
 Script for preprocessing data related to annotations and features.
