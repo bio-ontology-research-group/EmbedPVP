@@ -29,7 +29,6 @@ tmp = tempfile.mkdtemp(prefix='mowl', suffix='/')
 print(tmp)
 
 @ck.command()
-#@ck.option("--datasets", "-d", default = "pavs", help = "benchmark dataset: phenobackets,pavs")
 @ck.option("--onto", "-o", default = "hp", help = "Type of test: (go, mp, hp, uberon, union)")
 @ck.option("--method", "-m", default = 'TransE')
 @ck.option("--vector_size", "-v", type=int, default = 100)
@@ -92,10 +91,6 @@ def main(onto, method, vector_size ,epochs,  learning_rate , batch_size, device)
               
         test_entities, _ = Edge.getEntitiesAndRelations(eval_test_edges)
         head_entities, tail_entities = ds.evaluation_class() 
-
-        #ds_eval = GDAMouseDataset()
-        #ds_eval_train_edges = proj.project(ds_eval.ontology)
-        #ds_eval_test_edges = proj.project(ds_eval.testing)
 
         save_pickles(
                 (eval_train_edges, eval_train_file),
