@@ -6,7 +6,7 @@
 
 - `af_annotations.sh`: This script is used to annotate the variants with allele frequencies from different databases using [Annovar](https://annovar.openbioinformatics.org/en/latest/).
 
-- `annotation_dataset.py`: Prepare the annotation dataset from different ontologies ([GO](http://geneontology.org/docs/download-go-annotations/), [MP](http://www.informatics.jax.org/vocab/mp_ontology), [HPO](https://hpo.jax.org/app/download/annotation), [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon), and [CL](https://www.nature.com/articles/s41586-018-0590-4)).
+- `annotation_dataset.py`: Prepare the annotation dataset from different ontologies ([GO](http://geneontology.org/docs/download-go-annotations/), [MP](http://www.informatics.jax.org/vocab/mp_ontology), [HPO](https://hpo.jax.org/app/download/annotation), and [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon)
 
 - `generate_mowl_dataset.py`: Script to prepare the input ontology to run [mOWL](https://github.com/bio-ontology-research-group/mowl) library and add annotations to the [uPheno](https://zenodo.org/records/3710690) ontology.
 
