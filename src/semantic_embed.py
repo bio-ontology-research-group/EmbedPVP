@@ -30,7 +30,6 @@ ROOT='./mowl_results/'
 tmp = tempfile.mkdtemp(prefix='mowl', suffix='/')
 
 @ck.command()
-#@ck.option("--datasets", "-d", default = "pavs", help = "benchmark dataset: phenobackets,pavs")
 @ck.option("--onto", "-o", default = "hp", help = "Type of test: (go, mp, hp, uberon, union)")
 @ck.option("--method", "-m", default = 'TransE')
 @ck.option("--vector_size", "-v", type=int, default = 100)
