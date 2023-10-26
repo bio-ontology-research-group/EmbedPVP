@@ -7,7 +7,15 @@ We integrated the annotations from different sources:
 - Mammalian Phenotype ontology ([MP](http://www.informatics.jax.org/vocab/mp_ontology))
 - Human Phenotype Ontology ([HPO](https://hpo.jax.org/app/download/annotation))
 - Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
-- Gene expression in human Celltypes Ontology ([CL](https://www.nature.com/articles/s41586-018-0590-4))
+
+As these annotations are available for different numbers
+of genes, we also used the phenotypes based on the union of all genes
+and their annotations (i.e., for genes that have annotations from one,
+two or all four datasets, HPO, MP, GO, and Uberon). We used the
+integrated phenotype ontology [uPheno](https://zenodo.org/records/3710690) as our
+phenotype ontology to add background knowledge from biomedical
+ontologies, as it integrates human and model organism phenotypes and
+allows them to be compared.
 
 ## Dependencies
 
