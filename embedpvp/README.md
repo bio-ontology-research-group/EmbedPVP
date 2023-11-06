@@ -1,5 +1,5 @@
 # EmbedPVP
-Prioritizing causative variants SNP/indls by integrating functional embedding and biological annotations for genes.
+Prioritizing causative variants SNP/indels by integrating functional embedding and biological annotations for genes.
 
 ## Annotation data sources (integrated in the candidate SNP prediction workflow)
 We integrated the annotations from different sources:
