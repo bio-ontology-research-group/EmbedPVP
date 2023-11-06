@@ -25,4 +25,3 @@ Script for preprocessing data related to annotations and features.
 
 - `embedpvp_prediction.py`: 
 Script for training and testing the model, including hyperparameter optimization.
-
