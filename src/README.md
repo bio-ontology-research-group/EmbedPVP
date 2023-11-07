@@ -8,6 +8,9 @@ This script is used to download the annotation databases from [Annovar](https://
 - `af_annotations.sh`:
 This script is used to annotate the variants with allele frequencies from different databases using [Annovar](https://annovar.openbioinformatics.org/en/latest/).
 
+- `cadd.sh`:
+Script for the pathogenicity prediction using [CADD](https://cadd.gs.washington.edu/score).
+
 - `annotation_dataset.py`: 
 Prepare the annotation dataset from different ontologies ([GO](http://geneontology.org/docs/download-go-annotations/), [MP](http://www.informatics.jax.org/vocab/mp_ontology), [HPO](https://hpo.jax.org/app/download/annotation), and [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon)
 
