@@ -45,27 +45,26 @@ EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding an
 
 
 Options:
-  -d, --data-root TEXT       Data root folder  [required]
-  -i, --in_file TEXT         Annotated Input VCF file  [required]
-  -p, --hpo TEXT             List of phenotype codes separated by commas [required]
-  -pg, --pathogenicity TEXT  Path to the pathogenicity prediction file (CADD) [required]
-  -m, --model_type TEXT      Ontology model, one of the following (go , mp , hp, uberon, union)
-  -e, --embedding TEXT       Preferred embedding model (TransE, TransD,DL2vec)
-  -o, --outfile TEXT         Path to the results output file
-  --help                     Show this message and exit.
+  -d, --data-root TEXT      Data root folder  [required]
+  -i, --in_file TEXT        Annotated Input VCF file  [required]
+  -p, --pathogenicity TEXT  Path to the pathogenicity prediction file (CADD) [required]
+
+  -hpo, --hpo TEXT          List of phenotype codes separated by commas [required]
+
+  -m, --model_type TEXT     Ontology model, one of the following (go , mp , hp, uberon, union)
+
+  -e, --embedding TEXT      Preferred embedding model (e.g. TransD, TransE, TranR, ConvE ,DistMult, DL2vec, OWL2vc, EL, ELBox)
+
+  -dir, --outdir TEXT       Path to the output directory
+  -o, --outfile TEXT        Path to the results output file
+  --help                    Show this message and exit.
 
 ```
 
 ### Run the example:
 
 ```
-sh embedPVP \
-    -d data/
-    -i example.vcf \
-    -p example_cadd.tsv.gz \
-    -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 \
-    -m hp \
-    -e TransD \
+embedPVP  -d data   -i example.vcf   -p example_cadd.tsv.gz    -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459   -m hp    -e TransD 
     -outfile example_output.tsv   	
 
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
