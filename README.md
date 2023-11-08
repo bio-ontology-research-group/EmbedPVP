@@ -16,8 +16,7 @@ We integrated the annotations from different sources:
 </div>
 
 
-- The code was developed and tested using python 3.7. To install python dependencies run:  
- `pip install -r requirements.txt`
+- The code was developed and tested using python 3.9. 
 
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different 
 embedding-based methods.
