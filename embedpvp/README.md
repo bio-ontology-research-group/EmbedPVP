@@ -1,5 +1,5 @@
 # EmbedPVP
-Prioritizing causative variants SNP/indels by integrating functional embedding and biological annotations for genes.
+Prioritizing genomic variants (SNP/InDls) through neuro-symbolic, knowledge-enhanced learning
 
 ## Annotation data sources (integrated in the candidate SNP prediction workflow)
 We integrated the annotations from different sources:
@@ -9,24 +9,18 @@ We integrated the annotations from different sources:
 - Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
 - Gene expression in human Celltypes Ontology ([CL](https://www.nature.com/articles/s41586-018-0590-4))
 
-This work is done using embedding generated from [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type.
-
-We collected [different genomics features](https://annovar.openbioinformatics.org/en/latest/user-guide/filter/) using the [Annovar](https://annovar.openbioinformatics.org/en/latest/user-guide/download/)  public tool for the variants annotation. 
-
-
 ## Dependencies
-The code was developed and tested using python 3.7. To install python dependencies run:  
+
+<div align="right">
+<img src="https://raw.githubusercontent.com/bio-ontology-research-group/mowl/main/docs/source/mowl_black_background_colors_2048x2048px.png" alt="mOWL library" align="right" width="150">
+</div>
+
+
+- The code was developed and tested using python 3.7. To install python dependencies run:  
  `pip install -r requirements.txt`
 
-
-## Scripts
-- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
-- ``download.sh``: This script is used to download the annotions databases.
-- ``annotations.sh``: This script is used to annotate the varaints.
-- ``data_preprocessing.py``: preprocessing the annotations and features selection. 
-- ``DL2vec``: Details for generate DL2vec embeddings.
-- ``training.py``: script to train and testing the model, with Hyperparameter optimization
-
+- We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generated the embedding representation using different 
+embedding-based methods.
 
 ## Installation
 
@@ -34,47 +28,51 @@ The code was developed and tested using python 3.7. To install python dependenci
 pip install embedpvp
 ```
 
-- Database requirements: Installing Annovar: 
-  - To download and install the Annovar command line tool follow the [Annovar installation instructions](https://annovar.openbioinformatics.org/en/latest/user-guide/download/).
-
-## Running EmbedPVP using pretrained models
-1. Download the distribution file:
+## Running EmbedPVP using pretrained models:
+1. Download the distribution file and set up environment
 ```
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
 cd EmbedPVP
+conda env create -f environment.yml
+conda activate embedpvp
 ```
-2. Download all the files from [data]() and place the uncompressed files/repository in the folder named "data".
-3. Download the required database using Annovar by run:  `bash src/downloadDB.sh`
+2. Download all the files from [data]() and place the uncompressed the file in the folder named `/data`.
+3. Download the required database using [CADD](https://cadd.gs.washington.edu/score).
 4. Run the command `embedpvp --help` to display help and parameters:
 
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -inputfile [INPUTFILE]
-                        Path to VCF file
-  -hpo [HPO]            List of phenotype ids separated by commas
-  -outfile [OUTFILE]    Path to results file
-  -model [MODEL]        Preferred model (go, mp, uberon, hp, cl, union, intersection) , default='hp'
+
+Options:
+  -d, --data-root TEXT      Data root folder  [required]
+  -i, --in_file TEXT        Annotated Input VCF file  [required]
+  -p, --pathogenicity TEXT  Path to the pathogenicity prediction file (CADD) [required]
+  -hpo, --hpo TEXT          List of phenotype codes separated by commas [required]
+  -m, --model_type TEXT     Ontology model, one of the following (go , mp , hp, uberon, union)
+  -e, --embedding TEXT      Preferred embedding model (e.g. TransD, TransE, TranR, ConvE ,DistMult, DL2vec, OWL2vc, EL, ELBox)
+  -dir, --outdir TEXT       Path to the output directory
+  -o, --outfile TEXT        Path to the results output file
+  --help                    Show this message and exit.
+
 ```
 
-### Run the example (with you own HPO terms):
-    embedPVP -inputfile data/example.vcf -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -outfile example_output.txt -model hp 
+### Run the example:
 
- ```   
+```
+embedPVP -d data -i example.vcf -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransD -dir output/ -o example_output.tsv   	
+
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
  |========                        | 25% Annotated files generated successfully.
  |================                | 50% Phenotype prediction...
- |========================        | 75% SNP Prediction...
+ |========================        | 75% Variants prediction...
  |================================| 100%
 The analysis is Done. You can find the priortize list in the output file: example_output.txt 
 
 ```
 
 #### Output:
-The script will output a ranking a score for the candidate caustive SNP. 
-
+The script will output a ranking a score for the candidate caustive list of variants. 
 
 ## Note
 For any questions or comments please contact azza.althagafi@kaust.edu.sa
