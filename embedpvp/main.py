@@ -65,7 +65,7 @@ def main(data_root, in_file, pathogenicity, hpo, model_type, embedding, outdir, 
     while state != 'DONE':
         # Read input data, Load and Run pheno model
         bar.next()
-        #ontology = mowl_insert_annotations(hpo, owl_file)
+        ontology = mowl_insert_annotations(hpo, owl_file)
         print(f" Insert annotations to the ({model_type}) ontology...")
 
         if not os.path.exists(f'{outdir}/ontology.owl'):
