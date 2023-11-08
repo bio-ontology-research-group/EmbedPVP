@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: embedpvp
+Version: 1.0.1
+Summary: EmbedPVP: Integration of Genomics and Phenotypes for Variant Prioritization using Deep Learning
+Home-page: UNKNOWN
+Author: Azza Althagafi
+Author-email: azza.althagafi@kaust.edu.sa
+License: Apache 2.0
+Download-URL: https://github.com/bio-ontology-research-group/embedpvp/archive/v1.0.1.tar.gz
+Platform: UNKNOWN
+Requires-Python: >3
+Description-Content-Type: text/markdown
+
 # EmbedPVP
 Prioritizing genomic variants (SNP/InDls) through neuro-symbolic, knowledge-enhanced learning
 
@@ -43,34 +56,29 @@ conda activate embedpvp
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
 
-EmbedPVP: Prioritizing Causative Variants by Integrating Functional
-  Embedding and Biological Annotations for Genes
+Arguments:
 
-Options:
-  -d, --data-root TEXT       Data root folder  [required]
-  -i, --in_file TEXT         Annotated Input VCF file  [required]
-  -p, --hpo TEXT             List of phenotype codes separated by commas [required]
-  -pg, --pathogenicity TEXT  Path to the pathogenicity prediction file (CADD) [required]
-  -m, --model_type TEXT      Ontology model, one of the following (go , mp , hp, uberon, union)
-  -e, --embedding TEXT       Preferred embedding model (TransE, TransD,DL2vec)
-  -o, --outfile TEXT         Path to the results output file
-  --help                     Show this message and exit.
+-h, --help:             Show this help message and exit
+-inputfile [INPUTFILE]: Path to the VCF file
+-ontology [OWL]:        Path to the ontology file in OWL format
+-hpo [HPO]:             List of phenotype codes separated by commas
+-model [MODEL]:         Preferred model (go, mp, uberon, hp, cl, union), default='hp'
+-embedding [EMBED]:     Preferred embedding model (TransE, TransD, DL2vec), default='DL2vec'
+-pathogenicity [PATH]:  Path to the pathogenicity prediction file (CADD)
+-outfile [OUTFILE]:     Path to the results output file
 
 ```
 
 ### Run the example:
-797:1285416_OMIM:614266	http://purl.obolibrary.org/obo/HP_0004791	http://purl.obolibrary.org/obo/HP_0002020	http://purl.obolibrary.org/obo/HP_0100580	http://purl.obolibrary.org/obo/HP_0001428	http://purl.obolibrary.org/obo/HP_0011459
 
 ```
 sh embedPVP \
-    -d data/
-    -i example.vcf \
-    -owl mowl_hp.owl \
-    -p example_cadd.tsv.gz \
-    -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 \
-    -m hp \
-    -e TransD \
-    -maf 0.01 \
+    -inputfile data/example.vcf \
+    -ontology data/upheno.owl \
+    -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007 \
+    -model hp \
+    -embedding DL2vec \
+    -pathogenicity data/cadd_example.tsv \
     -outfile example_output.tsv   	
 
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
@@ -87,3 +95,5 @@ The script will output a ranking a score for the candidate caustive list of vari
 
 ## Note
 For any questions or comments please contact azza.althagafi@kaust.edu.sa
+
+
