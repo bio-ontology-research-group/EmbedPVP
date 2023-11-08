@@ -146,12 +146,13 @@ class ELBoxEmbeddings(EmbeddingELModel):
                  model_filepath=None,
                  device='cpu'
                  ):
-        super().__init__(dataset, batch_size, extended=True, model_filepath=model_filepath)
+        super().__init__(dataset, batch_size=batch_size,embed_dim=embed_dim,  extended=True, model_filepath=model_filepath)
 
         self.embed_dim = embed_dim
         self.margin = margin
         self.reg_norm = reg_norm
         self.learning_rate = learning_rate
+        self.batch_size = batch_size
         self.epochs = epochs
         self.device = device
         self._loaded = False
@@ -266,8 +267,8 @@ class ELBoxEmbeddings(EmbeddingELModel):
             if best_loss > valid_loss:
                 best_loss = valid_loss
                 th.save(self.model.state_dict(), self.model_filepath)
-            if (epoch + 1) % checkpoint == 0:
-                print(f'\nEpoch {epoch+1}: Train loss: {train_loss:.4f} Valid loss: {valid_loss:.4f}')
+            #if (epoch + 1) % checkpoint == 0:
+            #    print(f'\nEpoch {epoch+1}: Train loss: {train_loss:.4f} Valid loss: {valid_loss:.4f}')
 
     def evaluate_ppi(self):
         self.init_model()
@@ -287,7 +288,7 @@ class ELBoxEmbeddings(EmbeddingELModel):
     def get_embeddings(self):
         self.init_model()
         
-        print('Load the best model', self.model_filepath)
+        #print('Load the best model', self.model_filepath)
         self.model.load_state_dict(th.load(self.model_filepath))
         self.model.eval()
 
@@ -431,9 +432,10 @@ class ELEmbeddings(EmbeddingELModel):
                  model_filepath=None,
                  device='cpu'
                  ):
-        super().__init__(dataset, batch_size, extended=True, model_filepath=model_filepath)
+        super().__init__(dataset, batch_size=batch_size,embed_dim=embed_dim,  extended=True, model_filepath=model_filepath)
 
         self.embed_dim = embed_dim
+        self.batch_size=batch_size
         self.margin = margin
         self.reg_norm = reg_norm
         self.learning_rate = learning_rate
@@ -509,8 +511,8 @@ class ELEmbeddings(EmbeddingELModel):
             if best_loss > valid_loss:
                 best_loss = valid_loss
                 th.save(self.model.state_dict(), self.model_filepath)
-            if (epoch + 1) % checkpoint == 0:
-                print(f'\nEpoch {epoch}: Train loss: {train_loss:4f} Valid loss: {valid_loss:.4f}')
+            #if (epoch + 1) % checkpoint == 0:
+            #    print(f'\nEpoch {epoch}: Train loss: {train_loss:4f} Valid loss: {valid_loss:.4f}')
 
     def evaluate_ppi(self):
         self.init_model()
