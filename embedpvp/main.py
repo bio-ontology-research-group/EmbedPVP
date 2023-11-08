@@ -63,7 +63,6 @@ def main(data_root, in_file, pathogenicity, hpo, model_type, embedding, outdir, 
 
     state = 'START'
     while state != 'DONE':
-        # Read input data, Load and Run pheno model
         bar.next()
         ontology = mowl_insert_annotations(hpo, owl_file)
         print(f" Insert annotations to the ({model_type}) ontology...")
@@ -72,7 +71,6 @@ def main(data_root, in_file, pathogenicity, hpo, model_type, embedding, outdir, 
             raise Exception(f'Ontology file with the inserted annotation not found ({outdir}/ontology.owl) is missing!')
 
         bar.next()
-        # Call the pheno_models_embeddings function with appropriate arguments
         print(" Phenotype prediction...")
         variants_features = genomic_features(data_root, in_file, pathogenicity_scores)
         
