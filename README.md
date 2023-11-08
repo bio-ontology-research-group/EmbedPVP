@@ -59,7 +59,6 @@ Options:
 ```
 
 ### Run the example:
-797:1285416_OMIM:614266	http://purl.obolibrary.org/obo/HP_0004791	http://purl.obolibrary.org/obo/HP_0002020	http://purl.obolibrary.org/obo/HP_0100580	http://purl.obolibrary.org/obo/HP_0001428	http://purl.obolibrary.org/obo/HP_0011459
 
 ```
 sh embedPVP \
