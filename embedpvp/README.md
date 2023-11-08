@@ -58,7 +58,7 @@ Options:
 ### Run the example:
 
 ```
-embedpvp -d data -i example.vcf -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransD -dir output/ -o example_output.tsv   	
+embedpvp -d data/ -i example_annotation.vcf.hg38_multianno.txt  -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransE -dir output/ -o example_output1.tsv
 
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
  |========                        | 25% Annotated files generated successfully.
