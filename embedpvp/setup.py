@@ -23,13 +23,13 @@ pytest_runner = ["pytest < 6", "pytest-runner < 5"] if needs_pytest else []
 
 setup(
     name="embedpvp",
-    version="1.0.1",
+    version="1.0.2",
     description="EmbedPVP: Integration of Genomics and Phenotypes for Variant Prioritization using Deep Learning",
     long_description=open(README).read(),
     long_description_content_type="text/markdown",
     author="Azza Althagafi",
     author_email="azza.althagafi@kaust.edu.sa",
-    download_url="https://github.com/bio-ontology-research-group/embedpvp/archive/v1.0.1.tar.gz",
+    download_url="https://github.com/bio-ontology-research-group/embedpvp/archive/v1.0.2.tar.gz",
     license="Apache 2.0",
     packages=["embedpvp",],
     package_data={"embedpvp": [],},
