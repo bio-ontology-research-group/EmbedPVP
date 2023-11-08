@@ -7,7 +7,6 @@ We integrated the annotations from different sources:
 - Mammalian Phenotype ontology ([MP](http://www.informatics.jax.org/vocab/mp_ontology))
 - Human Phenotype Ontology ([HPO](https://hpo.jax.org/app/download/annotation))
 - Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
-- Gene expression in human Celltypes Ontology ([CL](https://www.nature.com/articles/s41586-018-0590-4))
 
 ## Dependencies
 
