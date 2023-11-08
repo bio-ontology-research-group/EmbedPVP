@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: embedpvp
-Version: 1.0.1
+Version: 1.0.2
 Summary: EmbedPVP: Integration of Genomics and Phenotypes for Variant Prioritization using Deep Learning
 Home-page: UNKNOWN
 Author: Azza Althagafi
 Author-email: azza.althagafi@kaust.edu.sa
 License: Apache 2.0
-Download-URL: https://github.com/bio-ontology-research-group/embedpvp/archive/v1.0.1.tar.gz
+Download-URL: https://github.com/bio-ontology-research-group/embedpvp/archive/v1.0.2.tar.gz
 Platform: UNKNOWN
 Requires-Python: >3
 Description-Content-Type: text/markdown
