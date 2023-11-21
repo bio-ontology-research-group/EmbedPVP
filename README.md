@@ -26,14 +26,6 @@ embedding-based methods.
 pip install embedpvp
 ```
 
-## Running EmbedPVP using pretrained models:
-1. Download the distribution file and set up the environment
-```
-git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
-cd EmbedPVP
-conda env create -f environment.yml
-conda activate embedpvp
-```
 2. Download all the files from [data](https://drive.google.com/file/d/1QQVG_hzYl1X-rO64zgOX0xvoxv1Ux9of/view?usp=drive_link) and place the uncompressed the file in the folder named `/data`.
 3. Download the required database using [CADD](https://cadd.gs.washington.edu/score).
 4. Run the command `embedpvp --help` to display help and parameters:
