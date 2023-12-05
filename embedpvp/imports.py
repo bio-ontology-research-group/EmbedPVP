@@ -21,7 +21,6 @@ import math
 import click as ck
 import numpy as np
 import pandas as pd
-import tensorflow as tf
 import gensim
 import random
 import pickle as pkl
