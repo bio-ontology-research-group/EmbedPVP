@@ -20,15 +20,25 @@ We integrated the annotations from different sources:
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generate the embedding representation using different 
 embedding-based methods.
 
-## Installation
+
+## Get the data
+
+1. Download all the files from [data](https://drive.google.com/file/d/1QQVG_hzYl1X-rO64zgOX0xvoxv1Ux9of/view?usp=drive_link) and place the uncompressed the file in the folder named `/data`.
+2. Download the required database using [CADD](https://cadd.gs.washington.edu/score).
+
+## Use the tool
 
 ```
-pip install embedpvp
+git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
+cd EmbedPVP/
+mkdir output
+cd embedpvp
+python main.py [args]
+
 ```
 
-2. Download all the files from [data](https://drive.google.com/file/d/1QQVG_hzYl1X-rO64zgOX0xvoxv1Ux9of/view?usp=drive_link) and place the uncompressed the file in the folder named `/data`.
-3. Download the required database using [CADD](https://cadd.gs.washington.edu/score).
-4. Run the command `embedpvp --help` to display help and parameters:
+
+4. Run the command `python main.py --help` to display help and parameters:
 
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
@@ -50,7 +60,7 @@ Options:
 ### Run the example:
 
 ```
-embedpvp -d data/ -i example_annotation.vcf.hg38_multianno.txt  -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransE -dir output/ -o example_output1.tsv
+  python main.py -d ../data/ -i example_annotation.vcf.hg38_multianno.txt  -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransE -dir ../output/ -o example_output1.tsv
 
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
  |========                        | 25% Annotated files generated successfully.

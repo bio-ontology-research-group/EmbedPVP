@@ -64,7 +64,7 @@ def main(data_root, in_file, pathogenicity, hpo, model_type, embedding, outdir, 
     state = 'START'
     while state != 'DONE':
         bar.next()
-        ontology = mowl_insert_annotations(hpo, owl_file)
+        ontology = mowl_insert_annotations(hpo, owl_file, outdir)
         print(f" Insert annotations to the ({model_type}) ontology...")
 
         if not os.path.exists(f'{outdir}/ontology.owl'):
