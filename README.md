@@ -18,6 +18,7 @@ We integrated the annotations from different sources:
 
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generate the embedding representation using different 
 embedding-based methods.
+    >  You need to have JAVA and JDK installed in your machine.
 
 
 
