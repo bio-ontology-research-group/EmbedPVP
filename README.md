@@ -38,7 +38,6 @@ cd EmbedPVP/
 mkdir output
 cd embedpvp
 python main.py [args]
-
 ```
 
 - Run the command `python main.py --help` to display help and parameters:
