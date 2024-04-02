@@ -28,6 +28,8 @@ embedding-based methods.
 
 ## Use the tool
 
+You can install the tool either from source or PyPi as follows:
+
 ### Install from source
 ```
 pip install -r requirements.txt
@@ -39,7 +41,7 @@ python main.py [args]
 
 ```
 
-Run the command `python main.py --help` to display help and parameters:
+- Run the command `python main.py --help` to display help and parameters:
 
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
@@ -76,8 +78,10 @@ The analysis is Done. You can find the priortize list in the output file: ../out
 pip install embedpvp
 ```
 
-#### Output:
+
+### Output:
 The script will output a ranking a score for the candidate caustive list of variants. 
+
 
 ## Note
 For any questions or comments please contact azza.althagafi@kaust.edu.sa
