@@ -31,7 +31,6 @@ embedding-based methods.
 ### Install from source
 ```
 pip install -r requirements.txt
-
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
 cd EmbedPVP/
 mkdir output
@@ -44,7 +43,6 @@ Run the command `python main.py --help` to display help and parameters:
 
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
-
 
 Options:
   -d, --data-root TEXT      Data root folder  [required]
