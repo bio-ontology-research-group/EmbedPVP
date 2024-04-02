@@ -28,6 +28,7 @@ embedding-based methods.
 
 ## Use the tool
 
+### Install from source
 ```
 pip install -r requirements.txt
 
@@ -72,13 +73,10 @@ The analysis is Done. You can find the priortize list in the output file: ../out
 
 ```
 
-
-Or you can install it using the command:
-
+### Install from PyPi
 ```
 pip install embedpvp
 ```
-
 
 #### Output:
 The script will output a ranking a score for the candidate caustive list of variants. 
