@@ -24,7 +24,7 @@ embedding-based methods.
 ## Get the data
 
 1. Download all the files from [data](https://drive.google.com/file/d/1QQVG_hzYl1X-rO64zgOX0xvoxv1Ux9of/view?usp=drive_link) and place the uncompressed the file in the folder named `/data`.
-2. Download the required database using [CADD](https://cadd.gs.washington.edu/score) and follow the [instructions](https://github.com/kircherlab/CADD-scripts) to get the TSV file with CADD score.
+2. Download the required database using [CADD](https://cadd.gs.washington.edu/score) and follow the [instructions](https://github.com/kircherlab/CADD-scripts) to generate the TSV file with CADD scores for the input VCF file.
 
 ## Use the tool
 
