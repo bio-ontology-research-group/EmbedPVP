@@ -68,16 +68,15 @@ python main.py -d ../data/ -i example_annotation.vcf.hg38_multianno.txt  -p exam
  |================                | 50% Phenotype prediction...
  |========================        | 75% Variants prediction...
  |================================| 100%
-The analysis is Done. You can find the priortize list in the output file: example_output.txt 
+The analysis is Done. You can find the priortize list in the output file: ../output/example_output.txt 
 
 ```
 
 
-or you can install it using the command:
+Or you can install it using the command:
 
 ```
 pip install embedpvp
-
 ```
 
 
