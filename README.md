@@ -15,7 +15,7 @@ We integrated the annotations from different sources:
 </div>
 
 
-- The code was developed and tested using python 3.9. 
+- The code was developed and tested using Python 3.9. 
 
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generate the embedding representation using different 
 embedding-based methods.
@@ -24,11 +24,13 @@ embedding-based methods.
 ## Get the data
 
 1. Download all the files from [data](https://drive.google.com/file/d/1QQVG_hzYl1X-rO64zgOX0xvoxv1Ux9of/view?usp=drive_link) and place the uncompressed the file in the folder named `/data`.
-2. Download the required database using [CADD](https://cadd.gs.washington.edu/score).
+2. Download the required database using [CADD](https://cadd.gs.washington.edu/score) and follow the [instruction](https://github.com/kircherlab/CADD-scripts) to get the TSV file with CADD score.
 
 ## Use the tool
 
 ```
+pip install -r requirements.txt
+
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
 cd EmbedPVP/
 mkdir output
@@ -37,8 +39,7 @@ python main.py [args]
 
 ```
 
-
-4. Run the command `python main.py --help` to display help and parameters:
+Run the command `python main.py --help` to display help and parameters:
 
 ```
 EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
@@ -60,7 +61,7 @@ Options:
 ### Run the example:
 
 ```
-  python main.py -d ../data/ -i example_annotation.vcf.hg38_multianno.txt  -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransE -dir ../output/ -o example_output1.tsv
+python main.py -d ../data/ -i example_annotation.vcf.hg38_multianno.txt  -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransE -dir ../output/ -o example_output1.tsv
 
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
  |========                        | 25% Annotated files generated successfully.
@@ -70,6 +71,15 @@ Options:
 The analysis is Done. You can find the priortize list in the output file: example_output.txt 
 
 ```
+
+
+or you can install it using the command:
+
+```
+pip install embedpvp
+
+```
+
 
 #### Output:
 The script will output a ranking a score for the candidate caustive list of variants. 

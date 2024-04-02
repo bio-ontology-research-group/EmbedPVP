@@ -103,7 +103,7 @@ def main(data_root, in_file, pathogenicity, hpo, model_type, embedding, outdir, 
         else:
             # Write the results to a file
             bar.next()
-            print(f' DONE! You can find the prediction results in the output file: {outfile}')
+            print(f' DONE! You can find the prediction results in the output file: {outdir}/{outfile}')
 
         state = 'DONE'
 
