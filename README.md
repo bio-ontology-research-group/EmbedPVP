@@ -44,7 +44,7 @@ python main.py [args]
 - Run the command `python main.py --help` to display help and parameters:
 
 ```
-EmbedPVP: Prioritizing Causative Variants by Integrating Functional Embedding and Biological Annotations for Genes.
+Usage: main.py [OPTIONS]
 
 Options:
   -d, --data-root TEXT      Data root folder  [required]
