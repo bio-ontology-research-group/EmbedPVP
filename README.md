@@ -59,7 +59,7 @@ Options:
 
 ```
 
-### Run the example:
+- *Run the example:*
 
 ```
 python main.py -d ../data/ -i example_annotation.vcf.hg38_multianno.txt  -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransE -dir ../output/ -o example_output1.tsv
