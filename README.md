@@ -10,7 +10,7 @@ We integrated the annotations from different sources:
 
 ## Dependencies
 <div align="right">
-<img src="https://raw.githubusercontent.com/bio-ontology-research-group/mowl/main/docs/source/mowl_black_background_colors_2048x2048px.png" alt="mOWL library" align="right" width="150">
+<img src="https://raw.githubusercontent.com/bio-ontology-research-group/mowl/main/docs/source/mowl_black_background_colors_2048x2048px.png" alt="mOWL library" align="right" width="130" height="130">
 </div>
 
 
