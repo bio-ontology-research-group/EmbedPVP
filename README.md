@@ -74,9 +74,7 @@ The analysis is Done. You can find the priortize list in the output file: ../out
 ```
 
 ### :ballot_box_with_check: Install from PyPi
-```
-pip install embedpvp
-```
+
 
 
 ### Output:
