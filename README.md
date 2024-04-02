@@ -31,7 +31,7 @@ embedding-based methods.
 
 You can install the tool either from source or PyPi as follows:
 
-### Install from source
+### :ballot_box_with_check: Install from source
 ```
 pip install -r requirements.txt
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
@@ -73,7 +73,7 @@ The analysis is Done. You can find the priortize list in the output file: ../out
 
 ```
 
-### Install from PyPi
+### :ballot_box_with_check: Install from PyPi
 ```
 pip install embedpvp
 ```
