@@ -33,9 +33,9 @@ You can install the tool either from source or PyPi as follows:
 
 ### :ballot_box_with_check: Install from source
 ```
-pip install -r requirements.txt
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
 cd EmbedPVP/
+pip install -r requirements.txt
 mkdir output
 cd embedpvp
 python main.py [args]
