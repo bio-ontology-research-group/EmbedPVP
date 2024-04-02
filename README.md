@@ -1,5 +1,5 @@
-# EmbedPVP
-Prioritizing genomic variants (SNP/InDls) through neuro-symbolic, knowledge-enhanced learning
+# Embedding-based Phenotype Variant Predictor (EmbedPVP)
+Prioritizing genomic variants through neuro-symbolic, knowledge-enhanced learning.
 
 ## Annotation data sources (integrated in the candidate SNP prediction workflow)
 We integrated the annotations from different sources:
@@ -81,6 +81,20 @@ pip install embedpvp
 ### Output:
 The script will output a ranking a score for the candidate caustive list of variants. 
 
+
+## Reference
+For further details or if you used EmbedPVP in your work, please refer to [this article](https://www.biorxiv.org/content/10.1101/2023.11.08.566179v1):
+
+```bibtex
+@article{althagafi2023prioritizing,
+  title={Prioritizing genomic variants through neuro-symbolic, knowledge-enhanced learning},
+  author={Althagafi, Azza and Zhapa-Camacho, Fernando and Hoehndorf, Robert},
+  journal={bioRxiv},
+  pages={2023--11},
+  year={2023},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
 
 ## Note
 For any questions or comments please contact azza.althagafi@kaust.edu.sa
