@@ -9,7 +9,6 @@ We integrated the annotations from different sources:
 - Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
 
 ## Dependencies
-
 <div align="right">
 <img src="https://raw.githubusercontent.com/bio-ontology-research-group/mowl/main/docs/source/mowl_black_background_colors_2048x2048px.png" alt="mOWL library" align="right" width="150">
 </div>
