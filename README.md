@@ -1,4 +1,4 @@
-# Embedding-based Phenotype Variant Predictor (EmbedPVP)
+# Embedding-based Phenotype Variant Predictor 
 Prioritizing genomic variants through neuro-symbolic, knowledge-enhanced learning.
 
 ## Annotation data sources (integrated in the candidate SNP prediction workflow)
