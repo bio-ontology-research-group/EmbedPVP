@@ -1,4 +1,4 @@
 mowl-borg
 click
 progress
-scipy==1.10.3
+scipy==1.7.0
