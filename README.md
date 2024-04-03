@@ -31,52 +31,23 @@ embedding-based methods.
 
 You can install the tool either from source or PyPi as follows:
 
+### Create a virtual environment
+```
+python3 -m venv embedpvp_env
+source ./embedpvp_env/bin/activate
+```
+
 ### :ballot_box_with_check: Install from source
 ```
 git clone https://github.com/bio-ontology-research-group/EmbedPVP.git
 cd EmbedPVP/
-pip install -r requirements.txt
+python setup.py install 
 mkdir output
-cd embedpvp
-python main.py [args]
-```
-
-- Run the command `python main.py --help` to display help and parameters:
-
-```
-Usage: main.py [OPTIONS]
-
-Options:
-  -d, --data-root TEXT      Data root folder  [required]
-  -i, --in_file TEXT        Annotated Input VCF file  [required]
-  -p, --pathogenicity TEXT  Path to the pathogenicity prediction file (CADD) [required]
-  -hpo, --hpo TEXT          List of phenotype codes separated by commas [required]
-  -m, --model_type TEXT     Ontology model, one of the following (go , mp , hp, uberon, union)
-  -e, --embedding TEXT      Preferred embedding model (e.g. TransD, TransE, TranR, ConvE ,DistMult, DL2vec, OWL2vc, EL, ELBox)
-  -dir, --outdir TEXT       Path to the output directory
-  -o, --outfile TEXT        Path to the results output file
-  --help                    Show this message and exit.
-
-```
-
-- **Run the example:**
-
-```
-python main.py -d ../data/ -i example_annotation.vcf.hg38_multianno.txt  -p example_cadd.tsv.gz -hpo HP:0004791,HP:0002020,HP:0100580,HP:0001428,HP:0011459 -m hp -e TransE -dir ../output/ -o example_output1.tsv
-
- Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
- |========                        | 25% Annotated files generated successfully.
- |================                | 50% Phenotype prediction...
- |========================        | 75% Variants prediction...
- |================================| 100%
-The analysis is Done. You can find the priortize list in the output file: ../output/example_output.txt 
-
+embedpvp [args]
 ```
 
 ### :ballot_box_with_check: Install from PyPi
 ```
-python3 -m venv embedpvp_env
-source ./embedpvp_env/bin/activate
 pip install embedpvp
 mkdir output
 embedpvp [args]
