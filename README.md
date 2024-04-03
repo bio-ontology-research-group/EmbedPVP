@@ -14,7 +14,8 @@ We integrated the annotations from different sources:
 </div>
 
 
-- The code was developed and tested using Python 3.9. 
+- The code was developed and tested using Python 3.9.6
+	>  You need to use any version of Python > 3.9 and < 3.10
 
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generate the embedding representation using different 
 embedding-based methods.
