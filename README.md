@@ -9,18 +9,18 @@ We integrated the annotations from different sources:
 - Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
 
 ## Dependencies
-<div align="right">
-<img src="https://raw.githubusercontent.com/bio-ontology-research-group/mowl/main/docs/source/mowl_black_background_colors_2048x2048px.png" alt="mOWL library" align="right" width="130" height="130">
-</div>
-
 
 - The code was developed and tested using Python 3.9.6
 	>  You need to use any version of Python > 3.9 and < 3.10
+
+<div align="left">
+<img src="https://raw.githubusercontent.com/bio-ontology-research-group/mowl/main/docs/source/mowl_black_background_colors_2048x2048px.png" alt="mOWL library" align="right" width="110" height="110">
 
 - We used ([mOWL](https://github.com/bio-ontology-research-group/mowl)) library to process the input dataset as well as generate the embedding representation using different 
 embedding-based methods.
     >  You need to have JAVA and JDK installed in your machine.
 
+</div>
 
 
 ## Get the data
